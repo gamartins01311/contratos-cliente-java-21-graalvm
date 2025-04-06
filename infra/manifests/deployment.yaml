@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: contratos-cliente-java-21
+  namespace: projetos
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: contratos-cliente-java-21
+  template:
+    metadata:
+      labels:
+        app: contratos-cliente-java-21
+    spec:
+      containers:
+        - name: contratos-cliente-java-21
+          image: localhost:5000/contratos-cliente-java-21:1.0.0
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "prod"
