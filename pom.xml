@@ -105,8 +105,7 @@
 						<env>
 							<BP_DATADOG_ENABLED>true</BP_DATADOG_ENABLED>
 							<BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
-								--initialize-at-build-time=org.hibernate
-								--initialize-at-run-time=org.jboss.logging
+								--initialize-at-run-time=org.hibernate,org.jboss.logging,org.slf4j,ch.qos.logback,org.apache.logging.log4j
 								--gc=G1
 								--report-unsupported-elements-at-runtime
 								--allow-incomplete-classpath
@@ -142,8 +141,7 @@
 									<env>
 										<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
 										<BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
-											--initialize-at-build-time=org.hibernate
-											--initialize-at-run-time=org.jboss.logging
+											--initialize-at-run-time=org.hibernate,org.jboss.logging,org.slf4j,ch.qos.logback,org.apache.logging.log4j
 											--gc=G1
 											--report-unsupported-elements-at-runtime
 											--allow-incomplete-classpath
