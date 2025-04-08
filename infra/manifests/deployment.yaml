@@ -19,12 +19,12 @@ spec:
         app: contratos-cliente-java-21
         tags.datadoghq.com/env: prod
         tags.datadoghq.com/service: contratos-cliente-java
-        tags.datadoghq.com/version: "1.0.1"
+        tags.datadoghq.com/version: "1.0.2"
         admission.datadoghq.com/enabled: "true"
     spec:
       containers:
         - name: contratos-cliente-java-21
-          image: localhost:5000/contratos.java.21:1.0.1
+          image: localhost:5000/contratos.java.21:1.0.2
           ports:
             - containerPort: 8080
           env:
@@ -35,7 +35,7 @@ spec:
             - name: DD_SERVICE
               value: "contratos-cliente-java"
             - name: DD_VERSION
-              value: "1.0.1"
+              value: "1.0.2"
             - name: DD_PROFILING_ENABLED
               value: "true"
             - name: DD_LOGS_INJECTION
