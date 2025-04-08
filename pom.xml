@@ -10,13 +10,20 @@
 	</parent>
 	<groupId>contratos-cliente</groupId>
 	<artifactId>contratos.java.21</artifactId>
-	<version>1.0.4</version>
+	<version>1.0.5</version>
 	<name>contratos.java.21</name>
 	<description>Microserviço de teste que efetua a busca de clientes </description>
 	<properties>
 		<java.version>21</java.version>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>org.jboss.logging</groupId>
+			<artifactId>jboss-logging-processor</artifactId>
+			<version>2.2.1.Final</version> <!-- ou a versão compatível com seu Hibernate -->
+			<scope>provided</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-core</artifactId>
@@ -98,6 +105,8 @@
 						<env>
 							<BP_DATADOG_ENABLED>true</BP_DATADOG_ENABLED>
 							<BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
+								--initialize-at-build-time=org.hibernate
+								--initialize-at-run-time=org.jboss.logging
 								--gc=G1
 								--report-unsupported-elements-at-runtime
 								--allow-incomplete-classpath
@@ -133,6 +142,8 @@
 									<env>
 										<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
 										<BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
+											--initialize-at-build-time=org.hibernate
+											--initialize-at-run-time=org.jboss.logging
 											--gc=G1
 											--report-unsupported-elements-at-runtime
 											--allow-incomplete-classpath
