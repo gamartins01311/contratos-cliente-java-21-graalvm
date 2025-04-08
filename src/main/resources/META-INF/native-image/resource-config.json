@@ -1,0 +1,8 @@
+{
+  "resources": {
+    "includes": [
+      { "pattern": "org/hibernate/internal/EntityManagerMessageLogger.*" },
+      { "pattern": "org/jboss/logging/.*" }
+    ]
+  }
+}

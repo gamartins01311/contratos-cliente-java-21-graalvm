@@ -1,0 +1,12 @@
+[
+  {
+    "name": "org.hibernate.internal.EntityManagerMessageLogger",
+    "allDeclaredMethods": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "org.jboss.logging.Logger",
+    "allDeclaredMethods": true
+  }
+]
